@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.printMessage = function(context, myQueueItem) {
-  context.log('Received item: ${myQueueItem}');
+module.exports.printMessage = function(context, myqueue) {
+  context.log(`Received item: ${myqueue}`);
   context.done();
 };

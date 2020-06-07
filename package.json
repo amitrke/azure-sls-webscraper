@@ -10,7 +10,11 @@
     "azure",
     "serverless"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@azure/storage-queue": "^12.0.5",
+    "azure-storage": "^2.10.3",
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "serverless-azure-functions": "^2.0.8"
   }

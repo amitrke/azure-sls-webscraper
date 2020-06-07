@@ -25,7 +25,6 @@ functions:
           methods:
             - GET
           authLevel: anonymous # can also be `function` or `admin`
-
   goodbye:
     handler: src/handlers/goodbye.sayGoodbye
     events:
@@ -37,8 +36,9 @@ functions:
   storageQueue:
     handler: src/handlers/storagequeue.printMessage
     events:
-      - queue: queue1
+      - queue: myqueue
         x-azure-settings:
+          name: myqueue
           connection: AzureWebJobsStorage
     
   # The following are a few examples of other events you can configure:
