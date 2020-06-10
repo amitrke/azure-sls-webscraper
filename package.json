@@ -1,21 +1,17 @@
 {
-  "name": "azure-sls-webscraper1",
+  "name": "azure-sls-webscraper",
   "version": "1.0.0",
-  "description": "Azure Functions sample for the Serverless framework",
+  "description": "",
   "scripts": {
-    "test": "echo \"No tests yet...\"",
-    "start": "func host start"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
   },
-  "keywords": [
-    "azure",
-    "serverless"
-  ],
-  "dependencies": {
-    "@azure/storage-queue": "^12.0.5",
-    "azure-storage": "^2.10.3",
-    "dotenv": "^8.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "serverless-azure-functions": "^2.0.8"
+    "@azure/functions": "^1.0.2-beta2",
+    "typescript": "^3.3.3"
   }
 }
